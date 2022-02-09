@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>变量与基本数据类型</title><url>https://mimanchi01.github.io/post/python1/</url><categories/><tags><tag>python</tag></tags><content type="html"> Python基础知识总结（一）
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>变量与基本数据类型</title><url>https://mimanchi01.github.io/post/python1/</url><categories><category>python</category></categories><tags><tag>python</tag></tags><content type="html"> Python基础知识总结（一）
 一、变量（Variable） 会变化的量。日常生活中什么是变量:钱、头发，时间……
 Python中如何去定义一个变量：
 变量名 = 变量值 name = value # = 赋值符号（赋值过程，右边的值赋值到左边） 当print后面的括号中放的是变量的话不需要加引号
