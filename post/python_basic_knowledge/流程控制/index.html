@@ -1,0 +1,623 @@
+<!doctype html><html lang=zh-cn dir=content>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta http-equiv=content-security-policy content="upgrade-insecure-requests">
+<title> 流程控制 - 北天的个人博客 </title>
+<meta name=keywords content="博客，程序员，建模师，读书，笔记，技术，分享，模型">
+<meta name=author content="-北天-">
+<meta property="og:title" content="流程控制">
+<meta property="og:site_name" content="北天的个人博客">
+<meta property="og:image" content="/img/author.jpg">
+<meta name=title content="流程控制 - 北天的个人博客">
+<meta name=description content="Lorem Ipsum Dolor Si Amet">
+<link rel="shortcut icon" href=/img/favicon.ico>
+<link rel=apple-touch-icon href=/img/apple-touch-icon.png>
+<link rel=apple-touch-icon-precomposed href=/img/apple-touch-icon.png>
+<link href=//cdn.bootcdn.net/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css rel=stylesheet type=text/css>
+<link href=//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.css rel=stylesheet>
+<link href=/css/main.css rel=stylesheet type=text/css>
+<link href=/css/syntax.css rel=stylesheet type=text/css>
+<script type=text/javascript>var _hmt=_hmt||[];(function(){var a=document.createElement("script"),b;a.src="https://hm.baidu.com/hm.js?Your BaiduSiteId",b=document.getElementsByTagName("script")[0],b.parentNode.insertBefore(a,b)})()</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=Your%20GoogleSiteId"></script>
+<script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','Your GoogleSiteId ')</script>
+</head>
+<body itemscope itemtype=http://schema.org/WebPage lang=zh-hans>
+<div class="container one-collumn sidebar-position-left page-home">
+<div class=headband></div>
+<header id=header class=header itemscope itemtype=http://schema.org/WPHeader>
+<div class=header-inner> <div class=site-brand-container>
+<div class=site-nav-toggle>
+<div class=toggle role=button style=opacity:1;top:0>
+<span class=toggle-line></span>
+<span class=toggle-line></span>
+<span class=toggle-line></span>
+</div>
+</div>
+<div class=site-meta>
+<div class=multi-lang-switch>
+<i class="fa fa-fw fa-language" style=margin-right:5px></i>
+</div>
+<div class=custom-logo-site-title>
+<a href=/ class=brand rel=start>
+<span class=logo-line-before><i></i></span>
+<span class=site-title>北天的个人博客</span>
+<span class=logo-line-after><i></i></span>
+</a>
+</div>
+<p class=site-subtitle>始终相信，每一个艰难的脚步，都会使我们的终点更高</p>
+</div>
+<div class=site-nav-right>
+<div class="toggle popup-trigger" style=opacity:1;top:0>
+<i class="fa fa-search fa-fw fa-lg"></i>
+</div>
+</div>
+</div>
+<nav class=site-nav>
+<ul id=menu class=menu>
+<li class=menu-item>
+<a href=/ rel=section>
+<i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页
+</a>
+</li>
+<li class=menu-item>
+<a href=/post rel=section>
+<i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档
+</a>
+</li>
+<li class=menu-item>
+<a href=/about.html rel=section>
+<i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于我
+</a>
+</li>
+<li class=menu-item>
+<a href=/404.html rel=section>
+<i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>公益404
+</a>
+</li>
+<li class="menu-item menu-item-search">
+<a href=javascript:; class=popup-trigger> <i class="menu-item-icon fa fa-search fa-fw"></i> <br> 搜索</a>
+</li>
+</ul>
+<div class=site-search>
+<div class="popup search-popup local-search-popup">
+<div class="local-search-header clearfix">
+<span class=search-icon><i class="fa fa-search"></i> </span>
+<span class=popup-btn-close><i class="fa fa-times-circle"></i></span>
+<div class=local-search-input-wrapper>
+<input autocomplete=off placeholder=搜索关键字... spellcheck=false type=text id=local-search-input autocapitalize=none autocorrect=off>
+</div>
+</div>
+<div id=local-search-result></div>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<main id=main class=main>
+<div class=main-inner>
+<div class=content-wrap>
+<div id=content class=content>
+<section id=posts class=posts-expand>
+<article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
+<header class=post-header>
+<h1 class=post-title itemprop="name headline">
+<a class=post-title-link href=https://mimanchi01.github.io/post/python_basic_knowledge/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/ itemprop=url>
+流程控制
+</a>
+</h1>
+<div class=post-meta>
+<span class=post-time>
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class=post-meta-item-text>时间：</span>
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-02-10">
+2022-02-10
+</time>
+</span>
+<span class=post-category>
+&nbsp; | &nbsp;
+<i class="fa fa-folder-o fa-fw"></i>
+<span class=post-meta-item-text>分类：</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/python itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>python</span>
+</a>
+&nbsp;
+</span>
+</span>
+<span>
+|
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class=post-meta-item-text>字数：</span>
+<span class=leancloud-world-count>2786 字</span>
+</span>
+<span>
+|
+<i class="fa fa-eye fa-fw"></i>
+<span class=post-meta-item-text>阅读：</span>
+<span class=leancloud-view-count>6分钟</span>
+</span>
+<span id=/post/python_basic_knowledge/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/ class=leancloud_visitors data-flag-title=流程控制>
+|
+<i class="fa fa-binoculars fa-fw"></i>
+<span class=post-meta-item-text>阅读次数：</span>
+<span class=leancloud-visitors-count></span>
+</span>
+</div>
+</header>
+<div class=post-body itemprop=articleBody>
+<p>Python基础知识总结（五）</p>
+<h2 id=一分支结构选择结构>一、分支结构（选择结构）</h2>
+<p>python中三大结构：顺序结构、分支结构、循环结构</p>
+<p>在顺序结构中多了一个选择的操作</p>
+<p>如果明天老师检查作业的话，我就今晚努力完成，否则我就不写</p>
+<h3 id=11-单分支结构if>1.1 单分支结构（if）</h3>
+<p>格式：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a2f;font-weight:700>if</span> 条件语句<span>（</span>判断条件<span>）</span>:
+    代码语句		<span style=color:#080;font-style:italic># 该语句执行，就是当if后面的判断条件成立（True）就执行，否则不执行</span>
+</code></pre></div><p>实例：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>res <span style=color:#666>=</span> <span style=color:#a2f>input</span>(<span style=color:#b44>&#34;老师明天检查作业吗（y/n）：&#34;</span>)
+
+<span style=color:#a2f;font-weight:700>if</span> res <span style=color:#666>==</span> <span style=color:#b44>&#39;y&#39;</span>:
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;今晚要写作业了。&#34;</span>)
+</code></pre></div><h3 id=12-双分支结构ifelse>1.2 双分支结构（if&mldr;else）</h3>
+<p>else 要么不存在，要么只存在一个</p>
+<p>格式：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a2f;font-weight:700>if</span> 条件语句<span>（</span>判断条件<span>）</span>:
+    代码语句		<span style=color:#080;font-style:italic># 该语句执行，就是当if后面的判断条件成立（True）就执行，否则不执行</span>
+<span style=color:#a2f;font-weight:700>else</span>:
+    代码语句		<span style=color:#080;font-style:italic>#当if判断条件不满足时，执行该代码，否则不执行</span>
+</code></pre></div><p>实例：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>res <span style=color:#666>=</span> <span style=color:#a2f>input</span>(<span style=color:#b44>&#34;老师明天检查作业吗（y/n）：&#34;</span>)
+
+<span style=color:#a2f;font-weight:700>if</span> res <span style=color:#666>==</span> <span style=color:#b44>&#39;y&#39;</span>:
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;今晚要写作业了。&#34;</span>)
+<span style=color:#a2f;font-weight:700>else</span>:
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;今晚开黑&#34;</span>)
+</code></pre></div><h3 id=13-多分支结构if--elif--else>1.3 多分支结构（if &mldr; elif &mldr; else）</h3>
+<p>elif 要么不存在，可以又一个，可以又多个</p>
+<p>格式：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a2f;font-weight:700>if</span> 条件语句<span>（</span>判断条件<span>）</span>:
+    代码语句		<span style=color:#080;font-style:italic># 该语句执行，就是当if后面的判断条件成立（True）就执行，否则不执行</span>
+
+<span style=color:#a2f;font-weight:700>elif</span> 条件语句<span>（</span>判断条件<span>）</span>:
+    代码语句
+
+<span style=color:#a2f;font-weight:700>else</span>:
+    代码语句		<span style=color:#080;font-style:italic>#当if判断条件不满足时，执行该代码，否则不执行</span>
+</code></pre></div><p>实例：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>res <span style=color:#666>=</span> <span style=color:#a2f>input</span>(<span style=color:#b44>&#34;老师明天检查作业吗（y/n）：&#34;</span>)
+
+<span style=color:#a2f;font-weight:700>if</span> res <span style=color:#666>==</span> <span style=color:#b44>&#39;y&#39;</span>:
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;今晚要写作业了。&#34;</span>)
+<span style=color:#a2f;font-weight:700>elif</span> res <span style=color:#666>==</span> <span style=color:#b44>&#39;n&#39;</span>:
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;今晚开黑&#34;</span>)
+<span style=color:#a2f;font-weight:700>else</span>:
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;你***在说啥？？&#34;</span>)
+</code></pre></div><p>练习：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#080;font-style:italic># 练习</span>
+<span style=color:#080;font-style:italic># 计算bmi指数</span>
+<span style=color:#b44>&#39;&#39;&#39;
+</span><span style=color:#b44>&lt;= 18.4 偏瘦
+</span><span style=color:#b44>18.5~23.9 正常
+</span><span style=color:#b44>24.0 ~ 27.9 过重
+</span><span style=color:#b44>28.0 肥胖
+</span><span style=color:#b44>&#39;&#39;&#39;</span>
+height <span style=color:#666>=</span> <span style=color:#a2f>float</span>(<span style=color:#a2f>input</span>(<span style=color:#b44>&#34;请输入你的身高（单位/米）：&#34;</span>))
+weight <span style=color:#666>=</span> <span style=color:#a2f>float</span>(<span style=color:#a2f>input</span>(<span style=color:#b44>&#34;请输入你的体重（单位/千克）：&#34;</span>))
+<span style=color:#080;font-style:italic># 计算bmi指数</span>
+bmi <span style=color:#666>=</span> weight <span style=color:#666>/</span> height<span style=color:#666>**</span><span style=color:#666>2</span>
+<span style=color:#a2f>print</span>(<span style=color:#b44>&#34;你的bmi指数为：&#34;</span>, bmi)
+
+<span style=color:#a2f;font-weight:700>if</span> bmi <span style=color:#666>&lt;=</span> <span style=color:#666>18.4</span>:
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;年轻人太瘦啦！！！&#34;</span>)
+<span style=color:#a2f;font-weight:700>elif</span> <span style=color:#666>18.5</span> <span style=color:#666>&lt;=</span> bmi <span style=color:#666>&lt;=</span> <span style=color:#666>23.9</span>: <span style=color:#080;font-style:italic>#  bmi＜=23.9 and bmi＞=18.5</span>
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;年轻人可以喔~&#34;</span>)
+<span style=color:#a2f;font-weight:700>elif</span> <span style=color:#666>24.0</span> <span style=color:#666>&lt;=</span> bmi <span style=color:#666>&lt;=</span> <span style=color:#666>27.9</span>:
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;年轻人该注意啦，有点重了哦~&#34;</span>)
+<span style=color:#a2f;font-weight:700>else</span>:
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;没眼看&#34;</span>)
+</code></pre></div><h3 id=14-pass-语句>1.4 pass 语句</h3>
+<p>pass是一个空语句，就是占位的意思</p>
+<p>当流程控制中，有语句没有想好怎么写时就可以使用pass，防止不必要的报错。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a2f;font-weight:700>if</span> bmi <span style=color:#666>&lt;=</span> <span style=color:#666>18.4</span>:
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;年轻人太瘦啦！！！&#34;</span>)
+<span style=color:#a2f;font-weight:700>elif</span> <span style=color:#666>18.5</span> <span style=color:#666>&lt;=</span> bmi <span style=color:#666>&lt;=</span> <span style=color:#666>23.9</span>: <span style=color:#080;font-style:italic>#  bmi＜=23.9 and bmi＞=18.5</span>
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;年轻人可以喔~&#34;</span>)
+<span style=color:#a2f;font-weight:700>elif</span> <span style=color:#666>24.0</span> <span style=color:#666>&lt;=</span> bmi <span style=color:#666>&lt;=</span> <span style=color:#666>27.9</span>:
+    <span style=color:#a2f;font-weight:700>pass</span>
+</code></pre></div><h2 id=二循环结构>二、循环结构</h2>
+<p>循环：抄写；跑圈</p>
+<p>循环：可以避免我们的代码的重复性，提高开发效率</p>
+<h3 id=21-while循环>2.1 while循环</h3>
+<p>格式：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a2f;font-weight:700>while</span> 循环条件:
+    代码语句	<span style=color:#080;font-style:italic>#当满足循环条件时，就执行否则不执行</span>
+    循环条件的更新
+</code></pre></div><blockquote>
+<p>如果循环条件没有更新就很容易进入死循环</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>num <span style=color:#666>=</span> <span style=color:#666>1</span>
+
+<span style=color:#a2f;font-weight:700>while</span> num <span style=color:#666>&lt;=</span> <span style=color:#666>100</span>:
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;阿宸很帅！&#34;</span> , num)
+    num <span style=color:#666>+=</span> <span style=color:#666>1</span>
+</code></pre></div><p>实例：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>num <span style=color:#666>=</span> <span style=color:#666>1</span>
+s <span style=color:#666>=</span> <span style=color:#666>0</span>
+<span style=color:#a2f;font-weight:700>while</span> num <span style=color:#666>&lt;=</span> <span style=color:#666>100</span>:
+    s <span style=color:#666>+=</span> num        <span style=color:#080;font-style:italic># s = s + num</span>
+    num <span style=color:#666>+=</span> <span style=color:#666>1</span>
+<span style=color:#a2f>print</span>(s)
+</code></pre></div><h3 id=22-for-循环>2.2 for 循环</h3>
+<p>for循环跟while循环不同，for不需要对循环条件进行手动更新</p>
+<p>格式：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a2f;font-weight:700>for</span> 变量 <span style=color:#a2f;font-weight:700>in</span> 可迭代对象<span>（</span>列表<span>，</span>元组<span>）</span>:
+    代码语句
+</code></pre></div><p>实例：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>ls <span style=color:#666>=</span> [<span style=color:#b44>&#39;阿宸&#39;</span> , <span style=color:#b44>&#39;木槿&#39;</span> , <span style=color:#b44>&#39;默契&#39;</span> , <span style=color:#b44>&#39;依依&#39;</span> , <span style=color:#b44>&#39;杏子&#39;</span>]
+
+<span style=color:#a2f;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> ls:
+    <span style=color:#a2f>print</span>(i)
+</code></pre></div><p>range（）函数</p>
+<p>取某一区间里面连续的整数</p>
+<p>起始值从0开始，不包括终点值</p>
+<p>实例：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a2f;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:#a2f>range</span>(<span style=color:#666>1</span> , <span style=color:#666>101</span>):
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;阿宸很帅！&#34;</span> , i)
+</code></pre></div><h2 id=三嵌套>三、嵌套</h2>
+<p>分支结构、循环结构的嵌套</p>
+<h3 id=31-分支结构的嵌套>3.1 分支结构的嵌套</h3>
+<blockquote>
+<p>今天突然想吃粽子了，附近没有专门买粽子的店，想：走到买包子铺 如果有卖粽子的就看一下是甜的还是咸的，如果是甜的就买两个，如果是咸的就买一个；要是没有卖粽子就买两个豆沙包。</p>
+</blockquote>
+<p>示例：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#b44>&#39;&#39;&#39;
+</span><span style=color:#b44>分析：判断包子铺有没有粽子
+</span><span style=color:#b44>1、有
+</span><span style=color:#b44>    1.1甜 2
+</span><span style=color:#b44>    1.2咸 1
+</span><span style=color:#b44>2 没有
+</span><span style=color:#b44>    豆沙包2
+</span><span style=color:#b44>&#39;&#39;&#39;</span>
+rice <span style=color:#666>=</span> <span style=color:#a2f>input</span>(<span style=color:#b44>&#34;有没有粽子（y/n）&#34;</span>)
+<span style=color:#a2f;font-weight:700>if</span> rice <span style=color:#666>==</span> <span style=color:#b44>&#39;y&#39;</span>:
+    taste <span style=color:#666>=</span> <span style=color:#a2f>input</span>(<span style=color:#b44>&#39;粽子是甜的还是咸的（y/n）&#39;</span>)
+    <span style=color:#a2f;font-weight:700>if</span> taste <span style=color:#666>==</span> <span style=color:#b44>&#39;y&#39;</span>:
+        <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;买两个粽子&#34;</span>)
+    <span style=color:#a2f;font-weight:700>else</span>:
+        <span style=color:#a2f>print</span>(<span style=color:#b44>&#39;买一个粽子&#39;</span>)
+<span style=color:#a2f;font-weight:700>else</span>:
+    <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;买两个豆沙包&#34;</span>)
+
+</code></pre></div><h3 id=32-循环嵌套>3.2 循环嵌套</h3>
+<blockquote>
+<p>A：一周五天：每天的早餐：喝一杯豆浆跟两个豆沙包，午餐：一份猪脚饭，晚餐：木桶饭 一周五天都如此 ，连续了四个星期。</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a2f;font-weight:700>for</span> week <span style=color:#a2f;font-weight:700>in</span> <span style=color:#a2f>range</span>(<span style=color:#666>1</span>,<span style=color:#666>5</span>):
+    <span style=color:#a2f>print</span>(<span style=color:#b44>f</span><span style=color:#b44>&#34;第</span><span style=color:#b68;font-weight:700>{</span>week<span style=color:#b68;font-weight:700>}</span><span style=color:#b44>星期&#34;</span>)
+    day <span style=color:#666>=</span> <span style=color:#666>1</span>
+    <span style=color:#a2f;font-weight:700>while</span> day <span style=color:#666>&lt;</span> <span style=color:#666>6</span>:
+        <span style=color:#a2f>print</span>(<span style=color:#b44>f</span><span style=color:#b44>&#39;第</span><span style=color:#b68;font-weight:700>{</span>day<span style=color:#b68;font-weight:700>}</span><span style=color:#b44>天,早餐：喝一杯豆浆跟两个豆沙包，午餐：一份猪脚饭，晚餐：木桶饭&#39;</span>)
+        day <span style=color:#666>+=</span> <span style=color:#666>1</span>
+</code></pre></div><h3 id=33分支循环嵌套>3.3分支、循环嵌套</h3>
+<h3 id=34-breakcontinue>3.4 break、continue</h3>
+<p>break：终止、停止循环</p>
+<p>continue : 逃过本次循环，继续执行下一次循环</p>
+<blockquote>
+<p>同学;今天开始要跑圈，每天四公里。操场跑道一圈只有四百米。今天因为热身没有做好，导致跑到一千二的时候脚崴了。</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>num <span style=color:#666>=</span> <span style=color:#666>4000</span> <span style=color:#666>/</span> <span style=color:#666>400</span>
+i <span style=color:#666>=</span> <span style=color:#666>0</span>
+m <span style=color:#666>=</span> <span style=color:#666>0</span>
+<span style=color:#a2f;font-weight:700>while</span> i <span style=color:#666>&lt;</span> num:
+    i <span style=color:#666>+=</span> <span style=color:#666>1</span>
+    m <span style=color:#666>+=</span> <span style=color:#666>400</span>
+    <span style=color:#a2f>print</span>(<span style=color:#b44>f</span><span style=color:#b44>&#34;跑到第</span><span style=color:#b68;font-weight:700>{</span>i<span style=color:#b68;font-weight:700>}</span><span style=color:#b44>圈，第</span><span style=color:#b68;font-weight:700>{</span>m<span style=color:#b68;font-weight:700>}</span><span style=color:#b44>米&#34;</span>)
+    <span style=color:#a2f;font-weight:700>if</span> m <span style=color:#666>==</span> <span style=color:#666>1200</span>:
+        <span style=color:#a2f>print</span>(<span style=color:#b44>&#34;脚崴了，跑不了了&#34;</span>)
+        <span style=color:#a2f;font-weight:700>break</span>
+</code></pre></div><blockquote>
+<p>今天买了十个小笼包 ， 边走边吃，结果吃到第五个的时候掉地上了，算了，继续吃第六个。</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a2f;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:#a2f>range</span>(<span style=color:#666>1</span> , <span style=color:#666>11</span>):
+    <span style=color:#a2f;font-weight:700>if</span> i <span style=color:#666>==</span> <span style=color:#666>5</span>:
+        <span style=color:#a2f>print</span>(<span style=color:#b44>&#39;掉地上了&#39;</span>)
+        <span style=color:#a2f;font-weight:700>continue</span>
+    <span style=color:#a2f>print</span>(<span style=color:#b44>f</span><span style=color:#b44>&#39;吃到第</span><span style=color:#b68;font-weight:700>{</span>i<span style=color:#b68;font-weight:700>}</span><span style=color:#b44>个小笼包&#39;</span>)
+</code></pre></div><h2 id=四缩进>四、缩进</h2>
+<p>Python 中使用缩进对代码的结构进行一个控制。</p>
+<p>缩进一般使用四个空格（一个tab键），在同一个代码块里面缩进要一致，在同一篇代码里面要么使用四个空格表示缩进，要么使用一个tab键，不要混用</p>
+<h2 id=作业>作业</h2>
+<ol>
+<li>
+<p>请求出 1 x 2 x 3 x 4 x &mldr;. 100</p>
+</li>
+<li>
+<p>请求出 0 到 100 中大于50的偶数</p>
+</li>
+<li>
+<p>说到回文数，大家可能会比较的陌生，但是在我们的日常生活中常会遇到这样的数字，只是你不知道它是回文数罢了。
+例如：121、212、101，这组数字就是回文数。指正向和逆向相等的数字。
+请输出100~999之间的回文数</p>
+</li>
+<li>
+<p>假设一张足够大的纸，纸张的厚度为0.5毫米。请问对折多少次以后，可以达到珠穆朗玛峰的高度(最新数据：8844.43米)。请编写程序输出对折 次数。
+ps:1mm = 0.001m</p>
+</li>
+<li>
+<p>猜拳游戏（1.剪刀 2.石头 3.布）</p>
+</li>
+</ol>
+<ul>
+<li>定义一个com变量，将其表示为电脑出拳</li>
+<li>定义一个player变量接收键盘输入，将其表示为玩家出拳</li>
+<li>使用分支结构进行判断。</li>
+</ul>
+<p>6、分支机构</p>
+<ul>
+<li>定义两个变量boy，girl接收他们的年龄</li>
+<li>判断两人年龄是否完全符合结婚年龄，若又一方不符合将返回不符合的结果</li>
+</ul>
+<p>7、计算100以内质数之和</p>
+<p>8、打印一个10*10的空心正方形</p>
+<p>9、登录操作</p>
+<ul>
+<li>用户名：mane:admin；密码：pw:26480</li>
+<li>给用户3次机会，判断登录的用户名与密码是否与定义的一样，超过3次就登录失败</li>
+</ul>
+<p>10、尝试着是否能使用循环写出九九乘法表（不做要求）</p>
+</div>
+<footer class=post-footer>
+<div class=post-tags>
+<a href=/tags/python rel=tag title=python>#python#</a>
+</div>
+<div class=addthis_inline_share_toolbox></div>
+<div class=post-nav>
+<div class=article-copyright>
+<div class=article-copyright-img>
+<img src=/img/qq_qrcode.png width=129px height=129px>
+<div style=text-align:center>QQ扫一扫交流</div>
+</div>
+<div class=article-copyright-info>
+<p>
+<span>声明：</span>流程控制
+</p>
+<p>
+<span>链接：</span>https://mimanchi01.github.io/post/python_basic_knowledge/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/
+</p>
+<p>
+<span>作者：</span>-北天-
+</p>
+<p>
+<span>声明： </span>本博客文章除特别声明外，均采用 <a href=https://creativecommons.org/licenses/by-nc-sa/3.0/ target=_blank style=text-decoration:underline>CC BY-NC-SA 3.0</a>许可协议，转载请注明出处！
+</p>
+</div>
+</div>
+<div class=clear></div>
+</div>
+<div class=reward-qr-info>
+<div>创作实属不易，如有帮助，那就打赏博主些许茶钱吧 ^_^</div>
+<button id=rewardButton disable=enable onclick="var qr=document.getElementById('QR');qr.style.display==='none'?qr.style.display='block':qr.style.display='none'">
+<span>赏</span>
+</button>
+<div id=QR style=display:none>
+<div id=wechat style=display:inline-block>
+<img id=wechat_qr src=/img/wechat-pay.png alt="WeChat Pay">
+<p>微信打赏</p>
+</div>
+<div id=alipay style=display:inline-block>
+<img id=alipay_qr src=/img/ali-pay.png alt=Alipay>
+<p>支付宝打赏</p>
+</div>
+</div>
+</div>
+<div class=post-nav>
+<div class="post-nav-next post-nav-item">
+<a href=https://mimanchi01.github.io/post/python_basic_knowledge/%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95/ rel=next title=有序序列的基本方法>
+<i class="fa fa-chevron-left"></i> 有序序列的基本方法
+</a>
+</div>
+<div class="post-nav-prev post-nav-item">
+<a href=https://mimanchi01.github.io/post/python_basic_knowledge/%E8%BF%90%E7%AE%97%E7%AC%A6/ rel=prev title=运算符>
+运算符
+<i class="fa fa-chevron-right"></i>
+</a>
+</div>
+</div>
+<div id=vcomments></div>
+</footer>
+</article>
+</section>
+</div>
+</div>
+<div class=sidebar-toggle>
+<div class=sidebar-toggle-line-wrap>
+<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+</div>
+</div>
+<aside id=sidebar class=sidebar>
+<div class=sidebar-inner>
+<section class="site-overview sidebar-panel sidebar-panel-active">
+<div class="site-author motion-element" itemprop=author itemscope itemtype=http://schema.org/Person>
+<img class=site-author-image itemprop=image src=/img/avatar.jpg alt=-北天->
+<p class=site-author-name itemprop=name>-北天-</p>
+<p class="site-description motion-element" itemprop=description>
+一个平平无奇的程序员和3D建模小白，热爱健身，热爱生活
+</p>
+</div>
+<nav class="site-state motion-element">
+<div class="site-state-item site-state-posts">
+<a href=/post/>
+<span class=site-state-item-count>11</span>
+<span class=site-state-item-name>日志</span>
+</a>
+</div>
+<div class="site-state-item site-state-categories">
+<a href=/categories/>
+<span class=site-state-item-count>3</span>
+<span class=site-state-item-name>分类</span>
+</a>
+</div>
+<div class="site-state-item site-state-tags">
+<a href=/tags/>
+<span class=site-state-item-count>8</span>
+<span class=site-state-item-name>标签</span>
+</a>
+</div>
+</nav>
+<div class="links-of-author motion-element">
+<span class=links-of-author-item>
+<a href target=_blank title=微信：beitiantian_nana>
+<i class="fa fa-fw fa-wechat"></i>
+微信：beitiantian_nana
+</a>
+</span>
+<span class=links-of-author-item>
+<a href="http://wpa.qq.com/msgrd?v=3&uin=1505031156&site=qq&menu=yes" target=_blank title=QQ>
+<i class="fa fa-fw fa-qq"></i>
+QQ
+</a>
+</span>
+<span class=links-of-author-item>
+<a href=https://github.com/MiManchi01 target=_blank title=Github>
+<i class="fa fa-fw fa-github"></i>
+Github
+</a>
+</span>
+<span class=links-of-author-item>
+<a href=https://blog.csdn.net/qq_52417436 target=_blank title=CSDN>
+<i class="fa fa-fw fa-globe"></i>
+CSDN
+</a>
+</span>
+</div>
+<div class="links-of-blogroll motion-element links-of-blogroll-inline">
+<div class=links-of-blogroll-title>
+<i class="fa fa-fw fa-globe"></i>
+友情链接
+</div>
+<ul class=links-of-blogroll-list>
+<li class=links-of-blogroll-item>
+<a href=http://dtplatform.savages.ink/ title=数字孪生平台 target=_blank>数字孪生平台</a>
+</li>
+<li class=links-of-blogroll-item>
+<a href=https://github.com/Chwenbo/RobberAndMercenarie title=和平精英绿洲仓库 target=_blank>和平精英绿洲仓库</a>
+</li>
+<li class=links-of-blogroll-item>
+<a href=https://www.runoob.com/python3/python3-tutorial.html title=Python3菜鸟教程 target=_blank>Python3菜鸟教程</a>
+</li>
+</ul>
+</div>
+<div class="tagcloud-of-blogroll motion-element tagcloud-of-blogroll-inline">
+<div class=tagcloud-of-blogroll-title>
+<i class="fa fa-fw fa-tags"></i>
+标签云
+</div>
+<ul class=tagcloud-of-blogroll-list>
+<li class=tagcloud-of-blogroll-item>
+<a href=/tags/python>Python</a>
+</li>
+<li class=tagcloud-of-blogroll-item>
+<a href=/tags/markdown>Markdown</a>
+</li>
+<li class=tagcloud-of-blogroll-item>
+<a href=/tags/css>Css</a>
+</li>
+<li class=tagcloud-of-blogroll-item>
+<a href=/tags/emoji>Emoji</a>
+</li>
+<li class=tagcloud-of-blogroll-item>
+<a href=/tags/html>HTML</a>
+</li>
+<li class=tagcloud-of-blogroll-item>
+<a href=/tags/privacy>Privacy</a>
+</li>
+<li class=tagcloud-of-blogroll-item>
+<a href=/tags/shortcodes>Shortcodes</a>
+</li>
+<li class=tagcloud-of-blogroll-item>
+<a href=/tags/text>Text</a>
+</li>
+</ul>
+</div>
+<div class="links-of-blogroll motion-element inline">
+<script type=text/javascript src="//rf.revolvermaps.com/0/0/6.js?i=Your%20RevolverMapId&m=7&c=e63100&cr1=ffffff&f=arial&l=0&bv=90&lx=-420&ly=420&hi=20&he=7&hc=a8ddff&rs=80" async></script>
+</div>
+</section>
+</div>
+</aside>
+</div>
+</main>
+<footer id=footer class=footer>
+<div class=footer-inner>
+<div class=copyright>
+<span class=copyright-year>
+&copy; 2010 - 2022
+</span>
+<span class=with-love><i class="fa fa-heart"></i></span>
+<span class=copyright-author>北天的个人博客</span>
+</div>
+<div class=powered-info>
+<span class=powered-by>
+Powered by - <a class=powered-link href=//gohugo.io target=_blank title=hugo>Hugo v0.92.1</a>
+</span>
+<span class=separator-line>/</span>
+<span class=theme-info>
+Theme by - <a class=powered-link href=//github.com/elkan1788/hugo-theme-next target=_blank> NexT
+</a>
+</span>
+</div>
+<div class=vistor-info>
+<span class=cnzz_icon id="cnzz_stat_icon_Your CNNZSiteId">
+<a href="//www.cnzz.com/stat/website.php?web_id=Your%20CNNZSiteId" target=_blank title=站长统计>
+<img border=0 hspace=0 vspace=0 src=//icon.cnzz.com/img/pic1.gif>
+</a>
+</span>
+<script type=text/javascript>(function(){var a=document.createElement('script'),b;a.type='text/javascript',a.async=!0,a.charset='utf-8',a.src='https://s4.cnzz.com/z_stat.php?id=Your CNNZSiteId&show=pic1',b=document.getElementsByTagName('script')[0],b.parentNode.insertBefore(a,b)})()</script>
+<script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script>
+<span class=site-uv>
+<i class="fa fa-user"></i>
+<span class=busuanzi-value id=busuanzi_value_site_uv></span>
+</span>
+<span class=separator-line>/</span>
+<span class=site-pv>
+<i class="fa fa-eye"></i>
+<span class=busuanzi-value id=busuanzi_value_site_pv></span>
+</span>
+</div>
+<div class=license-info>
+<span class=storage-info>
+Storage by
+<a href=https://github.com/MiManchi01 style=font-weight:700 target=_blank>GitHub</a>
+</span>
+<span class=separator-line>/</span>
+<span class=license-num>
+<a href=/ target=_blank>Written by 北天</a>
+</span>
+</div>
+</div>
+</footer>
+<div class=back-to-top>
+<i class="fa fa-arrow-up"></i>
+<span id=scrollpercent><span>0</span>%</span>
+</div>
+</div>
+<script type=text/javascript src=//cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js></script>
+<script type=text/javascript src=/js/search.js></script>
+<script type=text/javascript src=/js/affix.js></script>
+<script type=text/javascript src=/js/scrollspy.js></script>
+<script type=text/javascript>function getCntViewHeight(){var b=$('#content').height(),a=$(window).height(),c=b>a?b-a:$(document).height()-a;return c}function getScrollbarWidth(){var a=$('<div />').addClass('scrollbar-measure').prependTo('body'),b=a[0],c=b.offsetWidth-b.clientWidth;return a.remove(),c}function registerBackTop(){var b=50,a=$('.back-to-top');$(window).on('scroll',function(){var d,e,f,c,g;a.toggleClass('back-to-top-on',window.pageYOffset>b),d=$(window).scrollTop(),e=getCntViewHeight(),f=d/e,c=Math.round(f*100),g=c>100?100:c,$('#scrollpercent>span').html(g)}),a.on('click',function(){$("html,body").animate({scrollTop:0,screenLeft:0},800)})}function initScrollSpy(){var a='.post-toc',d=$(a),b='.active-current';d.on('activate.bs.scrollspy',function(){var b=$(a+' .active').last();c(),b.addClass('active-current')}).on('clear.bs.scrollspy',c),$('body').scrollspy({target:a});function c(){$(a+' '+b).removeClass(b.substring(1))}}function initAffix(){var a=$('.header-inner').height(),b=parseInt($('.main').css('padding-bottom'),10),c=a+10;$('.sidebar-inner').affix({offset:{top:c,bottom:b}}),$(document).on('affixed.bs.affix',function(){updateTOCHeight(document.body.clientHeight-100)})}function initTOCDimension(){var a,b;$(window).on('resize',function(){a&&clearTimeout(a),a=setTimeout(function(){var a=document.body.clientHeight-100;updateTOCHeight(a)},0)}),updateTOCHeight(document.body.clientHeight-100),b=getScrollbarWidth(),$('.post-toc').css('width','calc(100% + '+b+'px)')}function updateTOCHeight(a){a=a||'auto',$('.post-toc').css('max-height',a)}$(function(){var b=$('.header-inner').height()+10,c,d,a,e;$('#sidebar').css({'margin-top':b}).show(),c=$('.header-inner').height(),d=$('.sidebar-inner').height(),a=c+d+50,e=$('.content-wrap').height(),e<a&&$('.content-wrap').css('height',a+50),$('.site-nav-toggle').on('click',function(){var a=$('.site-nav'),e=$('.toggle'),b='site-nav-on',f='toggle-close',c=a.hasClass(b),g=c?'slideUp':'slideDown',d=c?'removeClass':'addClass';a.stop()[g]('normal',function(){a[d](b),e[d](f)})}),registerBackTop(),initScrollSpy(),initAffix(),initTOCDimension(),$('.sidebar-nav-toc').click(function(){$(this).addClass('sidebar-nav-active'),$(this).next().removeClass('sidebar-nav-active'),$('.'+$(this).next().attr('data-target')).toggle(500),$('.'+$(this).attr('data-target')).toggle(500)}),$('.sidebar-nav-overview').click(function(){$(this).addClass('sidebar-nav-active'),$(this).prev().removeClass('sidebar-nav-active'),$('.'+$(this).prev().attr('data-target')).toggle(500),$('.'+$(this).attr('data-target')).toggle(500)})})</script>
+<script src=//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.js></script>
+<script type=text/javascript>$(function(){$('.post-body').viewer()})</script>
+<script src=//unpkg.com/valine/dist/Valine.min.js></script>
+<script type=text/javascript>new Valine({el:'#vcomments',appId:'64kXyh5lEETVobOshIgQxzu0-gzGzoHsz',appKey:'gjudWXpueaWynOK5LqC9avoN',visitor:!0,placeholder:' 欢迎留下您的宝贵建议. ^_^ ',requiredFields:['nick','mail'],lang:"zh-cn"})</script>
+<script type=text/javascript src="//s7.addthis.com/js/300/addthis_widget.js#pubid=Your%20AddthisId"></script>
+<script>(function(){var a=document.createElement('script'),c=window.location.protocol.split(':')[0],b;c==='https'?a.src='https://zz.bdstatic.com/linksubmit/push.js':a.src='http://push.zhanzhang.baidu.com/push.js',b=document.getElementsByTagName("script")[0],b.parentNode.insertBefore(a,b)})()</script>
+<script>(function(a,e,f,g,b,c,d){a.DaoVoiceObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,c.charset="utf-8",d.parentNode.insertBefore(c,d)})(window,document,"script",('https:'==document.location.protocol?'https:':'http:')+"//widget.daovoice.io/widget/Your DaoVoiceId.js","daovoice")</script>
+<script type=text/javascript>$(function(){document.body.clientWidth>800&&(daovoice('init',{app_id:"Your DaoVoiceId"}),daovoice('update'))})</script>
+</body>
+</html>
