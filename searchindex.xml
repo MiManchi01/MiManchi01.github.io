@@ -29,7 +29,57 @@ verse = '天生我材必有用' #天我比用 >>> verse = '天生我材必有用
 ​ 2、输出第1个到第7个站点（不包括第7个）
 三、字符串
 ​ 1、定义一个day=’20211230‘的字符串，利用切片让输出格式为2021年12月30日
-​ 2、字符串“人生得意须尽欢” 输出“人得须欢”，逆向输出字符串</content></entry><entry><title>变量与基本数据类型</title><url>https://mimanchi01.github.io/post/python_basic_knowledge/%E5%8F%98%E9%87%8F%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url><categories><category>python</category></categories><tags><tag>python</tag></tags><content type="html"> Python基础知识总结（一）
+​ 2、字符串“人生得意须尽欢” 输出“人得须欢”，逆向输出字符串</content></entry><entry><title>有序序列的基本方法</title><url>https://mimanchi01.github.io/post/python_basic_knowledge/%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95/</url><categories><category>python</category></categories><tags><tag>python</tag></tags><content type="html"> Python基础知识总结（三）
+idle脚本模式注释：alt + 3，解除注释：alt + 4
+一、列表(list) 格式：
+list_name = ['数据','数据','数据'……] 实例：
+>>> name = ['阿宸' ,['方芳','马华腾'],'刘立健'] >>> print(name[1]) ['方芳', '马华腾'] >>> print(name[1][1]) 马华腾 >>> print(name[1][1][1]) 华 1.1 列表元素的增加 append（）方法 该方法的新增元素都添加在列表的末尾。
+语法格式：
+列表名.append(新增数据) 实例：
+subject = ['语文','数学'] print(subject) # 增加科目“英语” #列表名.append(新增数据) subject.append("英语") print(subject) subject.append("李耀") print(subject) extend（）方法 该方法的新增元素都添加在列表的末尾。
+语法格式：
+列表名.extend(新增数据) 实例：
+study = ['Java' , 'Python'] print(study) # C study.extend("C") print(study) append跟extend的区别
+append将我们的新增的元素视为一个完整元素进行一个添加，而extend则是将可拆分的元素进行细分之后进行添加
+name = ['语文','数学', '张琦' , '杨宝龙'] #1、苏俊澄 ， 2、蔡思劼 name.append('苏俊澄') print(name) name.extend('蔡思劼') print(name) # ['李圣伟','代睿辰'] name.append(['李圣伟','代睿辰']) print(name) name.extend(['李圣伟','代睿辰']) print(name) insert（）方法 可以根据我们的指定位置进行增加
+语法格式：
+列表名.insert(下标值，新增数据) 实例：
+grade = [666 , 650 , 630 ,590] print(grade) # 645 一定要按照成绩排名的顺序进行添加 #列表名.insert(下标值，新增数据) grade.insert(2 , 645) print(grade) 1.2 列表元素的删除 remove（） 方法 当列表中数据重复时，只删除下标值最小的数据
+语法格式：
+列表名.remove(数据) 实例：
+# 645 一定要按照成绩排名的顺序进行添加 #列表名.remove(数据) grade.remove(590) print(grade) pop（）方法 语法格式：
+列表名.pop(下标) 当下标没有写的话，会默认删除列表的最后一位元素。
+实例：
+grade = [666 ,650 , 645 , 630 ,590] print(grade) #列表名.pop(下标) grade.pop(2) print(grade) grade.pop() print(grade) clear （）方法 该方法会将元素全部删除，使其成为一个空列表
+语法格式：
+列表名.clear() 实例：
+grade = [666 ,650 , 645 , 630 ,590] grade.clear() print(grade) del 该函数可以删除一段元素
+语法格式：
+del 列表名[起始值：终点值] 实例：
+del name[:2] print(name) del name[::2] print(name) del name print(name) 当del函数后面没有参数的操作，会将整个列表进行删除
+1.3 列表元素的修改 列表单个元素的修改 格式：
+列表名[下标]= 新元素 实例：
+name = ['张琦' , '杨宝龙','阿宸', '李圣伟','代睿辰'] print(name) #列表名[下标]= 新元素 name[2] = '李耀' print(name) 列表一段元素的修改 格式
+列表名[起始值：终点值]= 新元素 实例：
+name = ['张琦' , '杨宝龙','阿宸', '黄泽鑫' ,'李圣伟','代睿辰'] print(name) ###列表名[下标]= 新元素 ##name[2] = '李耀' ##print(name) name[2:4] = "杨京宝",'宋小林' print(name) name1 = ['张琦' , '杨宝龙','阿宸', '黄泽鑫' ,'李圣伟','代睿辰'] print(name1) name1[2:4] = '张迎秋' print(name1) 1.4 列表元素的查询 index（）方法 该方法得到的结果是该元素的下标
+格式：
+列表名.index(数据，起始值，终点值) 实例：
+name = ['张琦' , '杨宝龙','阿宸', '黄泽鑫' ,'李圣伟','代睿辰'] print(name.index('代睿辰')) print(name.index('李圣伟', 0 , 3)) count（）方法 该方法时统计该元素在列表中出现的次数
+格式：
+列表名.count(数据) 实例：
+grade = [99 , 98 , 97 , 88 , 88 , 76 , 60 , 60 ,60] print(grade.count(60)) print(grade.count(50)) 1.5 列表长度 len（） 该函数统计列表长度
+格式：
+len(列表名) 实例：
+grade = [99 , 98 , 97 , 88 , 88 , 76 , 60 , 60 ,60] print(len(grade)) 作业 1、列表
+- 创建一个类似地铁线路的停站的列表； - 地铁线路扩建，在最开始部分增加了两个站 - 地铁线路扩建，在第5个站后面增加了一个站 - 因第8个地铁站老旧，停止使用，在线路上删除此站 - 找出第3到8之间所有的站点 2、我现在想知道一个数据的类型时候应该使用__________。
+3、列举出至少3点做法或者误区 &ndash;> 关于高效提问
+4、简述Python中目前学习到的几种数据类型,分别为什么？
+5、简述变量的命名规范有哪些
+6、python的bool类型只有两个值为啥？
+7、列表
+7.1嘉宾名单：如果你可以邀请任何人一起共进晚餐（无论是在世的还是故去的），你会邀请哪些人？请创建一个列表，其中包含至少 3 个你想邀请的人；然后，使用这个列表打印消息，邀请这些人来与你共进晚餐。 7.2：你刚得知有位嘉宾无法赴约，因此需要另外邀请一位嘉宾。  以完成练习 7.1 时编写的程序为基础，在程序末尾添加一条 print 语句，指出哪 位嘉宾无法赴约。  修改嘉宾名单，将无法赴约的嘉宾的姓名替换为新邀请的嘉宾的姓名。  再次打印一系列消息，向名单中的每位嘉宾发出邀请。 7.3：你刚找到了一个更大的餐桌，可容纳更多的嘉宾。请想想你还想邀请哪三位嘉宾。  以完成练习 7.1 或练习 7.2 时编写的程序为基础，在程序末尾添加一条 print 语句，指出你找到了一个更大的餐桌。  使用 insert()将一位新嘉宾添加到名单开头。  使用 insert()将另一位新嘉宾添加到名单中间。  使用 append()将最后一位新嘉宾添加到名单末尾。  打印一系列消息，向名单中的每位嘉宾发出邀请。 7.4：你刚得知新购买的餐桌无法及时送达，因此只能邀请两位嘉宾。  以完成练习7.3 时编写的程序为基础，在程序末尾添加一行代码，打印一条你只 能邀请两位嘉宾共进晚餐的消息。  使用 pop()不断地删除名单中的嘉宾，直到只有两位嘉宾为止。每次从名单中弹出一位嘉宾时，都打印一条消息，让该嘉宾知悉你很抱歉，无法邀请他来共进晚餐。  对于余下的两位嘉宾中的每一位，都打印一条消息，指出他依然在受邀人之列。  使用 del 将最后两位嘉宾从名单中删除，让名单变成空的。打印该名单，核实程序结束时名单确实是空的。 8、变量的本质是什么？
+9、元组
+定义一个元组，保存10个同学的成绩，成绩安装降序进行保存到元组中 5.1 获得前三名的成绩 5.2 获得第5到第8名的成绩 5.3 获得第4跟第6的成绩 5.4 获得第9，第6以及第3的成绩 5.5 获得最高分以及最低分</content></entry><entry><title>变量与基本数据类型</title><url>https://mimanchi01.github.io/post/python_basic_knowledge/%E5%8F%98%E9%87%8F%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url><categories><category>python</category></categories><tags><tag>python</tag></tags><content type="html"> Python基础知识总结（一）
 一、变量（Variable） 会变化的量。日常生活中什么是变量:钱、头发，时间……
 Python中如何去定义一个变量：
 变量名 = 变量值 name = value # = 赋值符号（赋值过程，右边的值赋值到左边） 当print后面的括号中放的是变量的话不需要加引号
