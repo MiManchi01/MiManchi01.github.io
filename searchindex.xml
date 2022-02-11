@@ -193,7 +193,7 @@ verse = '天生我材必有用' #天我比用 >>> verse = '天生我材必有用
 ​ 2、输出第1个到第7个站点（不包括第7个）
 三、字符串
 ​ 1、定义一个day=’20211230‘的字符串，利用切片让输出格式为2021年12月30日
-​ 2、字符串“人生得意须尽欢” 输出“人得须欢”，逆向输出字符串</content></entry><entry><title>变量与基本数据类型</title><url>https://mimanchi01.github.io/post/python_basic_knowledge/%E5%8F%98%E9%87%8F%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url><categories><category>python</category></categories><tags><tag>python</tag></tags><content type="html"> Python基础知识总结（一）
+​ 2、字符串“人生得意须尽欢” 输出“人得须欢”，逆向输出字符串</content></entry><entry><title>变量与基本数据类型</title><url>https://mimanchi01.github.io/post/%E5%8F%98%E9%87%8F%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%8F%98%E9%87%8F%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url><categories><category>python</category></categories><tags><tag>python</tag></tags><content type="html"> Python基础知识总结（一）
 一、变量（Variable） 会变化的量。日常生活中什么是变量:钱、头发，时间……
 Python中如何去定义一个变量：
 变量名 = 变量值 name = value # = 赋值符号（赋值过程，右边的值赋值到左边） 当print后面的括号中放的是变量的话不需要加引号
