@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>有序序列的基本方法</title><url>https://mimanchi01.github.io/post/python_basic_knowledge/%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95/</url><categories><category>python</category></categories><tags><tag>python</tag></tags><content type="html"> Python基础知识总结（三）
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>字符串详解与格式化输出</title><url>https://mimanchi01.github.io/post/python_basic_knowledge/%E6%97%A0%E5%BA%8F%E5%BA%8F%E5%88%97%E6%95%A3%E5%88%97%E7%B1%BB%E5%9E%8B/</url><categories><category>python</category></categories><tags><tag>python</tag></tags><content type="html"> Python基础知识总结（七）
+一、字典（dict） 字典是以键值对（key_vaule）的方式存在；两者是一种映射关系。
+1.1 字典的创建 键值对（{键 ：值}）
+字典使用{}：
+字典名 = {键 ：值，键1：值1，键2 ：值2，键3 ：值3……} 代码：
+grade = {'Chinese':99 , 'Math':100} print(grade) grade1 = {'Chinese':98 , 'Math':150 , 'English':99} print(grade1) 字典的键是唯一不可变的， 不可修改 ；字典的键可以是数字 ， 字符串 。字典值（value）可以是任意（Python支持的）数据类型
+当字典中的键重复了，原有的值将会被覆盖掉
+字典的输出
+字典名[key] print(name['姓名']) 1.2 字典值的查询 字典与前面的有序序列的区别就是，字典不可以通过下标查询
+通过键（key）查询
+get :通过键名获得值 如果键不存在，就会返回None
+语法格式：
+字典名[key] 字典名.get(key) 示例：
+name = {'姓名':"阿宸" , '年龄':25 , '联系地址':"广州天河"} print(name['联系地址']) print(name.get('年龄')) print(name.get('性别')) 格式：
+字典名.keys() 字典名.values() 字典名.items() 代码
+print(name.keys()) #获得字典中所有的键 print(name.values()) # 获得字典中所有的值 print(name.items()) #获得字典中所有的键值对 1.3 字典值键值对的增加 格式：
+字典名[key] = 值 当键存在时，将会修改原有的值 ，把原有的值覆盖掉
+setdefault ( ) 方法
+字典名.setdefault ( 键 ，值) 当键存在时，不会对其进行任何修改
+当值没有进行传递时。会默认为None
+代码：
+name['性别'] = '男' print(name) name.setdefault('身高',178) print(name) update( ) 方法
+即可增加也可以修改，并且一次可以多个个值的增加
+格式：
+字典名.update({键 ：值，键1：值1}) 当键存在是，将对原有的值进行修改
+代码：
+name.update({'身高':179 ,'体重':73.5}) print(name) name.update({'身高':181}) print(name) 1.4 字典键值对的删除 ​ pop 方法：删除指定的键
+字典名.pop(key) popitem( ) 删除一个键值对 (有些版本是删除最后一个)
+字典名.popitem() clear 清空字典
+字典名.clear() del
+del 字典名[key] 本质：用更好的方式对数据进行存储 ，有可以对数据进行解释说明的内容；有较好的可读性。
+二、集合（set） 在python中集合的概念跟中学数学集合的概念是一致的。
+集合的特性：无序性 ， 唯一性。
+2.1 集合的创建 格式：
+集合名 = {元素 ， 元素 ， 元素……} 集合的元素不可以是列表 ， 集合的本身的可变的，但是集合里面的元素是不可变的。
+示例：
+A = {56 , 89 , 99 , '阿宸' , 89 , True , ('李耀' , 56)} print(A) B = {1 ,2 ,12 ,1 ,2 ,3 ,4 ,1 ,1,1,1,1} print(B) c = set() print(type(c)) D = set({'老黄','木槿','默契'}) print(D) 创建空集合使用set（）
+2.2 集合的增加与删除 add（）方法
+格式
+集合名.add(元素) 代码：
+E = {15 , 1 , 52 , 5 , 1 ,6} print(E) E.add(666) print(E) remove()方法
+格式：
+集合名.remove(元素) discard()方法
+集合名.discard(元素) 当删除的元素不存在，不会报错
+代码；
+E.remove(15) print(E) E.discard(66) print(E) E.discard(6) print(E) 2.3 集合间的运算 集合在编程中的运算符：
+符号 含义 &amp; 交集 ，获得两个集合的公共元素 | 并集 ，获得两个集合的全部元素 - 差集，获得前面集合在后一个集合中没有的元素 ^ 对称差集，获得两个集合除公共元素外的所有元素（并集-交集） 代码：
+a = {2,5,18,6,1,4,8} b = {4,5,35,6,1,8} print(a &amp; b) # &amp; shift + 7 计算交集 print(a | b) # &amp; shift + \ 计算并集 print(a - b) # 计算差集 print(a ^ b) # &amp; shift + 6 计算对称差集 a 青菜 ， 土豆 ， 肉 ， 鱼 b 青菜 ， 豆腐 本质：存储非重复的数据. 去重</content></entry><entry><title>字符串详解与格式化输出</title><url>https://mimanchi01.github.io/post/python_basic_knowledge/%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%AF%A6%E8%A7%A3%E4%B8%8E%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/</url><categories><category>python</category></categories><tags><tag>python</tag></tags><content type="html"> Python基础知识总结（六）
+一、字符串 是一个序列类型，是不可变。（元组、数字类型也是不可变类型）
+>>> str1 = '今天是大年初八' >>> print(str1) 今天是大年初八 str1 = ''' 你的名字 ： 阿宸 岗位 ： Python讲师 ''' print(str1) 1.1 字符串的增加 ​ 字符串的拼接 使用 +
+str1 = 'Python 40 期' str2 = '班主任：木槿' print(str1 + str2) print(str1 + '大班课') print(str1) ​ 字符串的重复输出 *
+str1 = '大家好棒' print(str1 * 10) print('~~~~~~~~~~~') print(str1) 1.2 字符串的删除 ​ replace () 方法
+格式：
+字符串名.replace('要修改的值','替换值') 字符串名.replace('要修改的值','替换值',替换次数) 当替换值为空时，就可以表示删除之意。
+示例：
+str1 = '阿宸老师是直播见里面最帅的！' print(str1.replace('阿宸','')) # 字符串的替换 print(str1.replace('阿宸','七零')) # 字符串的多值替换 str2 = '大家好棒棒高棒棒棒棒棒棒棒棒棒' print(str2.replace('棒','好棒',5)) 1.3 字符串的查询 count()方式
+统计字符的出现次数
+格式：
+字符串名.count('要统计的字符') 实例：
+str2 = '大家好棒棒高棒棒棒棒棒棒棒棒棒' print(str2.count('棒')) find()方法
+该方法得到的结果就是字符串的下标
+格式：
+字符串名.find("要查找的字符") 字符串名.find("要查找的字符" ， 起始值) 当字符在字符串中多次出现，得到的结构是最小下标值
+当要查找的字符有多个字符的话，得到的是第一个字符的下标
+该方法如果查询的字符不存在返回的结果是 -1
+实例：
+str1 = '今天天气不错适合去爬山' print(str1.find('错')) print(str1.find('天')) print(str1.find('不错')) print(str1.find('适' , 3)) print(str1.find('适' , 10)) endswith( ) 方法
+判断字符串的尾字符是否与指定字符相同，该方法的结果就是bool
+格式 ：
+字符串名.endswith('指定字符') 实例：
+str1 = '今天是2月8号' print(str1.endswith('号')) print(str1.endswith('7号')) isdigit() 方法
+判断字符串中的字符是否都为数字,返回结果为bool
+格式：
+字符串名.isdigit() 实例：
+str1 = '2375423' str2 = '2346hello62347' print(str1.isdigit()) print(str2.isdigit()) isalpha() 方法
+判断字符串中的字符是否都为字符,返回结果为bool
+格式：
+字符串名.isalpha() 实例：
+str1 = 'hello' str2 = 'hello+sduh' print(str1.isalpha()) print(str2.isalpha()) 1.4 字符串的修改 split() 方法
+字符串的切割
+格式：
+字符串名.split("切割字符") 实例：
+str1 = '阿宸好奔溃啊！' res = str1.split('好') print(res) print(type(res)) strip()方法
+去除字符串前后空格
+格式：
+字符串名.strip() 实例：
+str1 = ' 把阿宸杀了吧! ' print(str1.strip()) upper()方法
+将字符串中的字符全部大写
+lower（）方法
+将字符串中的字符全部小写
+title（）方法
+将字符串中的字符首字母大写
+实例：
+str1 = 'how old are you' print(str1.upper()) str2 = 'HOW OLD ARE YOU' print(str2.lower()) str3 = 'how old are you' print(str3.title()) 二、格式化输出 num = 40 teacher = '阿宸' print('这是Python',num ,'期') print("主讲老师"+teacher) f 格式化
+f'字符串'在需要添加变量的地方+{变量名} num = 40 teacher = '阿宸' ##print('这是Python',num ,'期') ##print("主讲老师"+teacher) print(f'这是Python{num}期') print(f"主讲老师{teacher}") % 占位格式化
+% 占位符 %s 表示字符串 %d 表示整型 %f 表示浮点型 age = 25 name = '阿宸' work = 'Python讲师' print(''' -----个人介绍 姓名：%s年龄：%d职业：%s'''%(name , age , work)) num = 40 print('经过%d年'%num) height = 177.9999 print('我的身高%f'%height) print('我的身高%.2f'%height) print('我的体重%.2f千克'%(73.5)) format（)格式化
+age = 25 name = '阿宸' work = 'Python讲师' print(''' -----个人介绍 姓名：{}年龄：{}职业：{}'''.format(name , age , work)) print('我来自{},今年{}'.format('广东', 25)) 推荐网址：
+题目：https://www.runoob.com/python3/python3-examples.html
+题目：https://www.runoob.com/quiz/python-quiz.html
+知识：http://c.biancheng.net/
+http://www.cxy521.com/</content></entry><entry><title>运算符</title><url>https://mimanchi01.github.io/post/python_basic_knowledge/%E8%BF%90%E7%AE%97%E7%AC%A6/</url><categories><category>python</category></categories><tags><tag>python</tag></tags><content type="html"> Python基础知识总结（四）
+一、基本数据类型的转换 数据类型的转换有两种形式:自动转换；强制转换
+# 自动转换 bool True(1) False(0) >>> 1 + True 2 >>> 1+False 1 # 强制转换 字符串的转换 str() #将其他数据类型转变为字符串 >>> age = 25 >>> type(age) &lt;class 'int'> >>> str(age) '25' >>> res = str(age) >>> type(res) &lt;class 'str'> >>> res '25' # 转换成整型 int() #只有与整型类似的数据类型才可以进行转换 >>> str1 = '25' >>> type(str1) &lt;class 'str'> >>> res = int(str1) >>> type(res) &lt;class 'int'> >>> res 25 # 转换浮点型 float() #只有与浮点型类似的数据类型才可以进行转换 >>> str1 = '25.5' >>> res = float(str1) >>> type(res) &lt;class 'float'> >>> age = 25 >>> res = float(age) >>> type(res) &lt;class 'float'> >>> res 25.0 list() #转换成列表 tuple() #转换成元组 #转成bool bool() # 得到的结果是True、False # 结果为False的情况：空字符串，数字0/0.0；当数据类型为空时，得到的结果都为False，其余情况都为True >>> age = 12 >>> res = bool(age) >>> res True >>> age = 0 >>> res = bool(age) >>> res False >>> str1 = '' >>> res = bool(str1) >>> res False >>> name = [] >>> res = bool(name) >>> res False # 接受输入 >>> input("正方形的边长为：") 正方形的边长为：22 '22' >>> B = input("正方形的边长为：") 正方形的边长为：22 >>> B '22' >>> type(B) &lt;class 'str'> >>> B = int(input("正方形的边长为：")) 正方形的边长为：22 >>> type(B) &lt;class 'int'> >>> B * B 484 二、运算符 2.1 算术运算符 符号 含义 + 加法 - 减法 * 乘法 / 除法(得到的结果是浮点型) % 取余（得到余数） // 整除（有余数的情况下，得到整数部分） ** 幂（乘方） 2.2 赋值运算符 符号 含义 实例 = 赋值运算 c = a + b += 加赋值 a += b &mdash;> a = a + b -= 减赋值 a -= b &mdash;> a = a - b *= 乘法赋值 a *= b &mdash;> a = a * b /= 除法赋值 a /= b &mdash;> a = a / b //= 整除赋值 a //= b &mdash;> a = a // b %= 取余赋值 a %= b &mdash;> a = a % b **= 幂赋值 a **= b &mdash;> a = a **b 2.3 比较运算符 比较运算符得到的结果是bool
+符号 含义 > 大于号，比较两边数值的大小，返回结果是布尔型 &lt; 小于号 == 等号，仅比较两边数值是否相等（可以比较两边字符串是否相同） >= 大于等于 &lt;= 小于等于 != 不等于 >>> print(5>22) False >>> print(22 == 25) False >>> print(56 >= 56) True >>> print(88 >= 99) False >>> print(66 != 77) True >>> print(66 != 66) False 2.4 逻辑运算符 得到的结果是bool
+符号 含义 and 与运算，与中学数学中&rsquo;且&rsquo;含义一样。and左右两边的值必须都为真才为真否则为假 or 或运算，与中学数学中&rsquo;或&rsquo;含义一样。or左右两边的值有一个为真则为真，全为假才假 not 非运算，与中学数学中&rsquo;非&rsquo;含义一样。取反之意；即not后的值为真则结果为假，否则反之 >>> True and False False >>> True and True True >>> False and False False >>> True or False True >>> True or True True >>> False or False False >>> not False True >>> not True False # 阿宸：语文 95 数学 98 就站门口两个小时 >>> C = int(input("语文成绩：")) 语文成绩：99 >>> M = int(input("数学成绩：")) 数学成绩：90 >>> print(C >= 95 and M>= 98) False >>> print(C >= 95 or M>= 98) True # 短路 and ：当and前面的值为假，and就不往后面执行 >>> 1 and 0 0 >>> 0 and 1 0 >>> 0 and 2 0 >>> 1 and 1 1 or: 当or前面的值为真，or就不往后面执行 >>> 1 or 0 1 >>> 0 or 1 1 >>> 0 or 0 0 >>> 1 or 2 1 2.5 成员运算符 得到的结果是bool
+in : 表示该元素（数据）在该序列中
+not in : 表示该元素（数据）不在该序列中
+>>> name = '黄泽鑫' >>> print('鑫' in name) True >>> str1 = "阿宸很帅" >>> print('丑' in str1) False >>> print("丑" in str1) False >>> print("丑" not in str1) True >>> ls = [23 , 33 , 43 , 34] >>> print(45 in ls) False >>> print(23 in ls) True 2.6 运算符优先级 >>> 2 + 1 * 3 5 >>> 23 and 1 - 1 0 >>> 23 > 20 + 1 True >>> 23 > 25 - 5 True >>> 三、编辑器的安装 、作业 1、运算符（考虑变量转换问题） （1）已知小明的成绩是98分，小白的成绩比小明低2.5分 求小白的成绩
+（2）从控制台输入一个学生的语文英语和数学成绩 求该学生的平均成绩
+（3）从控制台分别输入学生1和学生2 的数学成绩 输出学生1的成绩是否比学生2的成绩低
+（4）计算圆的面积
+用户输入的是圆的直径 （5）摄氏度转为华氏温度
+接受用户输入的摄氏温度数值 转化公式：华氏温度 = （摄氏度 * 1.8）+ 32 （6）计算BMI指数
+接受用户输入的身高（单位/米）、体重（单位/千克） BMI指数为体重除以身高的平方 （7）鸡兔同笼
+用户输入鸡兔总共的只数，腿的总数 结合运算符得到鸡兔分别有多少只 8 ``苹果的价格是8.5元一斤 ``买了7.5斤苹果 ``计算付款金额并输出 9、已知买5支铅笔要6元钱，控制台输出17支铅笔多少钱？（a÷b代码用a/b表示）(难度★)</content></entry><entry><title>有序序列的基本方法</title><url>https://mimanchi01.github.io/post/python_basic_knowledge/%E6%9C%89%E5%BA%8F%E5%BA%8F%E5%88%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95/</url><categories><category>python</category></categories><tags><tag>python</tag></tags><content type="html"> Python基础知识总结（三）
 idle脚本模式注释：alt + 3，解除注释：alt + 4
 一、列表(list) 格式：
 list_name = ['数据','数据','数据'……] 实例：

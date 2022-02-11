@@ -4,14 +4,14 @@
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
-<title> 数据公式设置显示 - 北天的个人博客 </title>
+<title> 字符串详解与格式化输出 - 北天的个人博客 </title>
 <meta name=keywords content="博客，程序员，建模师，读书，笔记，技术，分享，模型">
 <meta name=author content="-北天-">
-<meta property="og:title" content="数据公式设置显示">
+<meta property="og:title" content="字符串详解与格式化输出">
 <meta property="og:site_name" content="北天的个人博客">
 <meta property="og:image" content="/img/author.jpg">
-<meta name=title content="数据公式设置显示 - 北天的个人博客">
-<meta name=description content="设置MathJax的简要指南">
+<meta name=title content="字符串详解与格式化输出 - 北天的个人博客">
+<meta name=description content="Lorem Ipsum Dolor Si Amet">
 <link rel="shortcut icon" href=/img/favicon.ico>
 <link rel=apple-touch-icon href=/img/apple-touch-icon.png>
 <link rel=apple-touch-icon-precomposed href=/img/apple-touch-icon.png>
@@ -103,31 +103,42 @@
 <article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
-<a class=post-title-link href=https://mimanchi01.github.io/post/other_matters/math-typesetting/ itemprop=url>
-数据公式设置显示
+<a class=post-title-link href=https://mimanchi01.github.io/post/python_basic_knowledge/%E6%97%A0%E5%BA%8F%E5%BA%8F%E5%88%97%E6%95%A3%E5%88%97%E7%B1%BB%E5%9E%8B/ itemprop=url>
+字符串详解与格式化输出
 </a>
 </h1>
 <div class=post-meta>
 <span class=post-time>
 <i class="fa fa-calendar-o fa-fw"></i>
 <span class=post-meta-item-text>时间：</span>
-<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2019-03-08">
-2019-03-08
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-02-11">
+2022-02-11
 </time>
+</span>
+<span class=post-category>
+&nbsp; | &nbsp;
+<i class="fa fa-folder-o fa-fw"></i>
+<span class=post-meta-item-text>分类：</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/python itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>python</span>
+</a>
+&nbsp;
+</span>
 </span>
 <span>
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字数：</span>
-<span class=leancloud-world-count>938 字</span>
+<span class=leancloud-world-count>1581 字</span>
 </span>
 <span>
 |
 <i class="fa fa-eye fa-fw"></i>
 <span class=post-meta-item-text>阅读：</span>
-<span class=leancloud-view-count>2分钟</span>
+<span class=leancloud-view-count>4分钟</span>
 </span>
-<span id=/post/other_matters/math-typesetting/ class=leancloud_visitors data-flag-title=数据公式设置显示>
+<span id=/post/python_basic_knowledge/%E6%97%A0%E5%BA%8F%E5%BA%8F%E5%88%97%E6%95%A3%E5%88%97%E7%B1%BB%E5%9E%8B/ class=leancloud_visitors data-flag-title=字符串详解与格式化输出>
 |
 <i class="fa fa-binoculars fa-fw"></i>
 <span class=post-meta-item-text>阅读次数：</span>
@@ -136,159 +147,185 @@
 </div>
 </header>
 <div class=post-body itemprop=articleBody>
-<p>Hugo项目中的数学表示法可以通过使用第三方JavaScript库来实现。</p>
-<p>在这个例子中，我们将使用 <a href=https://www.mathjax.org/>MathJax</a></p>
-<ul>
-<li>
-<p>Create a post under <code>/content/en[zh-CN]/math.md</code></p>
-</li>
-<li>
-<p>可以全局启用MathJax，请在项目配置中将参数<code>math</code>设置为<code>true</code></p>
-</li>
-<li>
-<p>或是在每页基础上启用MathJax，在内容文件中包括参数<code>math: true</code></p>
-</li>
-</ul>
-<p><strong>注意：</strong> 使用<a href=https://docs.mathjax.org/en/latest/input/tex/index.html>支持的TeX功能</a>的联机参考资料</p>
-<h3 id=例子>例子</h3>
-<h2 id=重复的分数>重复的分数</h2>
-<p>$$
-\frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} \equiv 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\cdots} } } }
-$$</p>
-<h2 id=总和记号>总和记号</h2>
-<p>$$
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-$$</p>
-<h2 id=几何级数之和>几何级数之和</h2>
-<p>我把接下来的两个例子分成了几行，这样它在手机上表现得更好。这就是为什么它们包含 <code>\displaystyle</code>。</p>
-<p>$$
-\displaystyle\sum_{i=1}^{k+1}i
-$$</p>
-<p>$$
-\displaystyle= \left(\sum_{i=1}^{k}i\right) +(k+1)
-$$</p>
-<p>$$
-\displaystyle= \frac{k(k+1)}{2}+k+1
-$$</p>
-<p>$$
-\displaystyle= \frac{k(k+1)+2(k+1)}{2}
-$$</p>
-<p>$$
-\displaystyle= \frac{(k+1)(k+2)}{2}
-$$</p>
-<p>$$
-\displaystyle= \frac{(k+1)((k+1)+1)}{2}
-$$</p>
-<h2 id=乘记号>乘记号</h2>
-<p>$$
-\displaystyle 1 + \frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots = \displaystyle \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})}, \displaystyle\text{ for }\lvert q\rvert &lt; 1.
-$$</p>
-<h2 id=随文数式>随文数式</h2>
-<p>这是一些线性数学: $$ k_{n+1} = n^2 + k_n^2 - k_{n-1} $$ ， 然后是更多的文本。</p>
-<h2 id=希腊字母>希腊字母</h2>
-<p>$$
-\Gamma\ \Delta\ \Theta\ \Lambda\ \Xi\ \Pi\ \Sigma\ \Upsilon\ \Phi\ \Psi\ \Omega
-\alpha\ \beta\ \gamma\ \delta\ \epsilon\ \zeta\ \eta\ \theta\ \iota\ \kappa\ \lambda\ \mu\ \nu\ \xi \ \omicron\ \pi\ \rho\ \sigma\ \tau\ \upsilon\ \phi\ \chi\ \psi\ \omega\ \varepsilon\ \vartheta\ \varpi\ \varrho\ \varsigma\ \varphi
-$$</p>
-<h2 id=箭头>箭头</h2>
-<p>$$
-\gets\ \to\ \leftarrow\ \rightarrow\ \uparrow\ \Uparrow\ \downarrow\ \Downarrow\ \updownarrow\ \Updownarrow
-$$</p>
-<p>$$
-\Leftarrow\ \Rightarrow\ \leftrightarrow\ \Leftrightarrow\ \mapsto\ \hookleftarrow
-\leftharpoonup\ \leftharpoondown\ \rightleftharpoons\ \longleftarrow\ \Longleftarrow\ \longrightarrow
-$$</p>
-<p>$$
-\Longrightarrow\ \longleftrightarrow\ \Longleftrightarrow\ \longmapsto\ \hookrightarrow\ \rightharpoonup
-$$</p>
-<p>$$
-\rightharpoondown\ \leadsto\ \nearrow\ \searrow\ \swarrow\ \nwarrow
-$$</p>
-<h2 id=符号>符号</h2>
-<p>$$
-\surd\ \barwedge\ \veebar\ \odot\ \oplus\ \otimes\ \oslash\ \circledcirc\ \boxdot\ \bigtriangleup
-$$</p>
-<p>$$
-\bigtriangledown\ \dagger\ \diamond\ \star\ \triangleleft\ \triangleright\ \angle\ \infty\ \prime\ \triangle
-$$</p>
-<h2 id=微积分学>微积分学</h2>
-<p>$$
-\int u \frac{dv}{dx},dx=uv-\int \frac{du}{dx}v,dx
-$$</p>
-<p>$$
-f(x) = \int_{-\infty}^\infty \hat f(\xi),e^{2 \pi i \xi x}
-$$</p>
-<p>$$
-\oint \vec{F} \cdot d\vec{s}=0
-$$</p>
-<h2 id=洛伦茨方程>洛伦茨方程</h2>
-<p>$$
-\begin{aligned} \dot{x} & = \sigma(y-x) \ \dot{y} & = \rho x - y - xz \ \dot{z} & = -\beta z + xy \end{aligned}
-$$</p>
-<h2 id=交叉乘积>交叉乘积</h2>
-<p>这在KaTeX中是可行的，但在这种环境中馏分的分离不是很好。</p>
-<p>$$
-\mathbf{V}_1 \times \mathbf{V}_2 = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \ \frac{\partial X}{\partial u} & \frac{\partial Y}{\partial u} & 0 \ \frac{\partial X}{\partial v} & \frac{\partial Y}{\partial v} & 0 \end{vmatrix}
-$$</p>
-<p>这里有一个解决方案:使用“mfrac”类(在MathJax情况下没有区别)的额外类使分数更小:</p>
-<p>$$
-\mathbf{V}_1 \times \mathbf{V}_2 = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \ \frac{\partial X}{\partial u} & \frac{\partial Y}{\partial u} & 0 \ \frac{\partial X}{\partial v} & \frac{\partial Y}{\partial v} & 0 \end{vmatrix}
-$$</p>
-<h2 id=强调>强调</h2>
-<p>$$
-\hat{x}\ \vec{x}\ \ddot{x}
-$$</p>
-<h2 id=有弹性的括号>有弹性的括号</h2>
-<p>$$
-\left(\frac{x^2}{y^3}\right)
-$$</p>
-<h2 id=评估范围>评估范围</h2>
-<p>$$
-\left.\frac{x^3}{3}\right|_0^1
-$$</p>
-<h2 id=诊断标准>诊断标准</h2>
-<p>$$
-f(n) = \begin{cases} \frac{n}{2}, & \text{if } n\text{ is even} \ 3n+1, & \text{if } n\text{ is odd} \end{cases}
-$$</p>
-<h2 id=麦克斯韦方程组>麦克斯韦方程组</h2>
-<p>$$
-\begin{aligned} \nabla \times \vec{\mathbf{B}} -, \frac1c, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \ \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \ \nabla \times \vec{\mathbf{E}}, +, \frac1c, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \ \nabla \cdot \vec{\mathbf{B}} & = 0 \end{aligned}
-$$</p>
-<p>这些方程式很狭窄。我们可以使用(例如)添加垂直间距 [1em] 在每个换行符(\)之后。正如你在这里看到的：</p>
-<p>$$
-\begin{aligned} \nabla \times \vec{\mathbf{B}} -, \frac1c, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \[1em] \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \[0.5em] \nabla \times \vec{\mathbf{E}}, +, \frac1c, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \[1em] \nabla \cdot \vec{\mathbf{B}} & = 0 \end{aligned}
-$$</p>
-<h2 id=统计学>统计学</h2>
-<p>固定词组：</p>
-<p>$$
-\frac{n!}{k!(n-k)!} = {^n}C_k
-{n \choose k}
-$$</p>
-<h2 id=分数在分数>分数在分数</h2>
-<p>$$
-\frac{\frac{1}{x}+\frac{1}{y}}{y-z}
-$$</p>
-<h2 id=ｎ次方根>ｎ次方根</h2>
-<p>$$
-\sqrt[n]{1+x+x^2+x^3+\ldots}
-$$</p>
-<h2 id=矩阵>矩阵</h2>
-<p>$$
-\begin{pmatrix} a_{11} & a_{12} & a_{13}\ a_{21} & a_{22} & a_{23}\ a_{31} & a_{32} & a_{33} \end{pmatrix}
-\begin{bmatrix} 0 & \cdots & 0 \ \vdots & \ddots & \vdots \ 0 & \cdots & 0 \end{bmatrix}
-$$</p>
-<h2 id=标点符号>标点符号</h2>
-<p>$$
-f(x) = \sqrt{1+x} \quad (x \ge -1)
-f(x) \sim x^2 \quad (x\to\infty)
-$$</p>
-<p>现在用标点符号:</p>
-<p>$$
-f(x) = \sqrt{1+x}, \quad x \ge -1
-f(x) \sim x^2, \quad x\to\infty
-$$</p>
+<p>Python基础知识总结（七）</p>
+<h2 id=一字典dict>一、字典（dict）</h2>
+<p>字典是以键值对（key_vaule）的方式存在；两者是一种映射关系。</p>
+<h3 id=11-字典的创建>1.1 字典的创建</h3>
+<p>键值对（{键 ：值}）</p>
+<p>字典使用{}：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>字典名 <span style=color:#666>=</span> {键 <span>：</span>值<span>，</span>键1<span>：</span>值1<span>，</span>键2 <span>：</span>值2<span>，</span>键3 <span>：</span>值3<span>……</span>}
+</code></pre></div><p>代码：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>grade <span style=color:#666>=</span> {<span style=color:#b44>&#39;Chinese&#39;</span>:<span style=color:#666>99</span> , <span style=color:#b44>&#39;Math&#39;</span>:<span style=color:#666>100</span>}
+<span style=color:#a2f>print</span>(grade)
+
+grade1 <span style=color:#666>=</span> {<span style=color:#b44>&#39;Chinese&#39;</span>:<span style=color:#666>98</span> ,
+         <span style=color:#b44>&#39;Math&#39;</span>:<span style=color:#666>150</span> ,
+         <span style=color:#b44>&#39;English&#39;</span>:<span style=color:#666>99</span>}
+<span style=color:#a2f>print</span>(grade1)
+</code></pre></div><blockquote>
+<p>字典的键是唯一不可变的， 不可修改 ；字典的键可以是数字 ， 字符串 。字典值（value）可以是任意（Python支持的）数据类型</p>
+<p>当字典中的键重复了，原有的值将会被覆盖掉</p>
+</blockquote>
+<p>字典的输出</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>字典名[key]
+<span style=color:#a2f>print</span>(name[<span style=color:#b44>&#39;姓名&#39;</span>])
+</code></pre></div><h3 id=12-字典值的查询>1.2 字典值的查询</h3>
+<p>字典与前面的有序序列的区别就是，字典不可以通过下标查询</p>
+<p>通过键（key）查询</p>
+<p>get :通过键名获得值 如果键不存在，就会返回None</p>
+<p>语法格式：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>字典名[key]
+字典名<span style=color:#666>.</span>get(key)
+</code></pre></div><p>示例：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>name <span style=color:#666>=</span> {<span style=color:#b44>&#39;姓名&#39;</span>:<span style=color:#b44>&#34;阿宸&#34;</span> , <span style=color:#b44>&#39;年龄&#39;</span>:<span style=color:#666>25</span> , <span style=color:#b44>&#39;联系地址&#39;</span>:<span style=color:#b44>&#34;广州天河&#34;</span>}
+<span style=color:#a2f>print</span>(name[<span style=color:#b44>&#39;联系地址&#39;</span>])
+<span style=color:#a2f>print</span>(name<span style=color:#666>.</span>get(<span style=color:#b44>&#39;年龄&#39;</span>))
+<span style=color:#a2f>print</span>(name<span style=color:#666>.</span>get(<span style=color:#b44>&#39;性别&#39;</span>))
+</code></pre></div><p>格式：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>字典名<span style=color:#666>.</span>keys()
+字典名<span style=color:#666>.</span>values()
+字典名<span style=color:#666>.</span>items()
+</code></pre></div><p>代码</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a2f>print</span>(name<span style=color:#666>.</span>keys())  <span style=color:#080;font-style:italic>#获得字典中所有的键</span>
+<span style=color:#a2f>print</span>(name<span style=color:#666>.</span>values())    <span style=color:#080;font-style:italic># 获得字典中所有的值</span>
+<span style=color:#a2f>print</span>(name<span style=color:#666>.</span>items()) <span style=color:#080;font-style:italic>#获得字典中所有的键值对</span>
+</code></pre></div><h3 id=13-字典值键值对的增加>1.3 字典值键值对的增加</h3>
+<p>格式：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>字典名[key] <span style=color:#666>=</span> 值
+</code></pre></div><blockquote>
+<p>当键存在时，将会修改原有的值 ，把原有的值覆盖掉</p>
+</blockquote>
+<p>setdefault ( ) 方法</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>字典名<span style=color:#666>.</span>setdefault ( 键 <span>，</span>值) 
+</code></pre></div><blockquote>
+<p>当键存在时，不会对其进行任何修改</p>
+<p>当值没有进行传递时。会默认为None</p>
+</blockquote>
+<p>代码：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>name[<span style=color:#b44>&#39;性别&#39;</span>] <span style=color:#666>=</span> <span style=color:#b44>&#39;男&#39;</span>
+<span style=color:#a2f>print</span>(name)
+
+name<span style=color:#666>.</span>setdefault(<span style=color:#b44>&#39;身高&#39;</span>,<span style=color:#666>178</span>)
+<span style=color:#a2f>print</span>(name)
+</code></pre></div><p>update( ) 方法</p>
+<p>即可增加也可以修改，并且一次可以多个个值的增加</p>
+<p>格式：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>字典名<span style=color:#666>.</span>update({键 <span>：</span>值<span>，</span>键1<span>：</span>值1})
+</code></pre></div><blockquote>
+<p>当键存在是，将对原有的值进行修改</p>
+</blockquote>
+<p>代码：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>name<span style=color:#666>.</span>update({<span style=color:#b44>&#39;身高&#39;</span>:<span style=color:#666>179</span> ,<span style=color:#b44>&#39;体重&#39;</span>:<span style=color:#666>73.5</span>})
+<span style=color:#a2f>print</span>(name)
+
+name<span style=color:#666>.</span>update({<span style=color:#b44>&#39;身高&#39;</span>:<span style=color:#666>181</span>})
+<span style=color:#a2f>print</span>(name)
+</code></pre></div><h3 id=14-字典键值对的删除>1.4 字典键值对的删除</h3>
+<p>​ pop 方法：删除指定的键</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>字典名<span style=color:#666>.</span>pop(key)
+</code></pre></div><p>popitem( ) 删除一个键值对 (有些版本是删除最后一个)</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>字典名<span style=color:#666>.</span>popitem()
+</code></pre></div><p>clear 清空字典</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>字典名<span style=color:#666>.</span>clear()
+</code></pre></div><p>del</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#a2f;font-weight:700>del</span> 字典名[key]
+</code></pre></div><p>本质：用更好的方式对数据进行存储 ，有可以对数据进行解释说明的内容；有较好的可读性。</p>
+<h2 id=二集合set>二、集合（set）</h2>
+<p>在python中集合的概念跟中学数学集合的概念是一致的。</p>
+<p>集合的特性：无序性 ， 唯一性。</p>
+<h3 id=21-集合的创建>2.1 集合的创建</h3>
+<p>格式：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>集合名 <span style=color:#666>=</span> {元素 <span>，</span> 元素 <span>，</span> 元素<span>……</span>}
+</code></pre></div><blockquote>
+<p>集合的元素不可以是列表 ， 集合的本身的可变的，但是集合里面的元素是不可变的。</p>
+</blockquote>
+<p>示例：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>A <span style=color:#666>=</span> {<span style=color:#666>56</span> , <span style=color:#666>89</span> , <span style=color:#666>99</span> , <span style=color:#b44>&#39;阿宸&#39;</span> , <span style=color:#666>89</span> , <span style=color:#a2f;font-weight:700>True</span> , (<span style=color:#b44>&#39;李耀&#39;</span> , <span style=color:#666>56</span>)}
+<span style=color:#a2f>print</span>(A)
+
+B <span style=color:#666>=</span> {<span style=color:#666>1</span> ,<span style=color:#666>2</span> ,<span style=color:#666>12</span> ,<span style=color:#666>1</span> ,<span style=color:#666>2</span> ,<span style=color:#666>3</span> ,<span style=color:#666>4</span> ,<span style=color:#666>1</span> ,<span style=color:#666>1</span>,<span style=color:#666>1</span>,<span style=color:#666>1</span>,<span style=color:#666>1</span>}
+<span style=color:#a2f>print</span>(B)
+
+c <span style=color:#666>=</span> <span style=color:#a2f>set</span>()
+<span style=color:#a2f>print</span>(<span style=color:#a2f>type</span>(c))
+
+D <span style=color:#666>=</span> <span style=color:#a2f>set</span>({<span style=color:#b44>&#39;老黄&#39;</span>,<span style=color:#b44>&#39;木槿&#39;</span>,<span style=color:#b44>&#39;默契&#39;</span>})
+<span style=color:#a2f>print</span>(D)
+</code></pre></div><p>创建空集合使用set（）</p>
+<h3 id=22-集合的增加与删除>2.2 集合的增加与删除</h3>
+<p>add（）方法</p>
+<p>格式</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>集合名<span style=color:#666>.</span>add(元素)
+</code></pre></div><p>代码：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>E <span style=color:#666>=</span> {<span style=color:#666>15</span> , <span style=color:#666>1</span> , <span style=color:#666>52</span> , <span style=color:#666>5</span> , <span style=color:#666>1</span> ,<span style=color:#666>6</span>}
+<span style=color:#a2f>print</span>(E)
+E<span style=color:#666>.</span>add(<span style=color:#666>666</span>)
+<span style=color:#a2f>print</span>(E)
+</code></pre></div><p>remove()方法</p>
+<p>格式：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>集合名<span style=color:#666>.</span>remove(元素)
+</code></pre></div><p>discard()方法</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>集合名<span style=color:#666>.</span>discard(元素)
+</code></pre></div><blockquote>
+<p>当删除的元素不存在，不会报错</p>
+</blockquote>
+<p>代码；</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>E<span style=color:#666>.</span>remove(<span style=color:#666>15</span>)
+<span style=color:#a2f>print</span>(E)
+
+E<span style=color:#666>.</span>discard(<span style=color:#666>66</span>)
+<span style=color:#a2f>print</span>(E)
+
+E<span style=color:#666>.</span>discard(<span style=color:#666>6</span>)
+<span style=color:#a2f>print</span>(E)
+</code></pre></div><h3 id=23-集合间的运算>2.3 集合间的运算</h3>
+<p>集合在编程中的运算符：</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&</td>
+<td>交集 ，获得两个集合的公共元素</td>
+</tr>
+<tr>
+<td>|</td>
+<td>并集 ，获得两个集合的全部元素</td>
+</tr>
+<tr>
+<td>-</td>
+<td>差集，获得前面集合在后一个集合中没有的元素</td>
+</tr>
+<tr>
+<td>^</td>
+<td>对称差集，获得两个集合除公共元素外的所有元素（并集-交集）</td>
+</tr>
+</tbody>
+</table>
+<p>代码：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>a <span style=color:#666>=</span> {<span style=color:#666>2</span>,<span style=color:#666>5</span>,<span style=color:#666>18</span>,<span style=color:#666>6</span>,<span style=color:#666>1</span>,<span style=color:#666>4</span>,<span style=color:#666>8</span>}
+b <span style=color:#666>=</span> {<span style=color:#666>4</span>,<span style=color:#666>5</span>,<span style=color:#666>35</span>,<span style=color:#666>6</span>,<span style=color:#666>1</span>,<span style=color:#666>8</span>}
+
+<span style=color:#a2f>print</span>(a <span style=color:#666>&amp;</span> b) <span style=color:#080;font-style:italic># &amp; shift + 7 计算交集</span>
+
+<span style=color:#a2f>print</span>(a <span style=color:#666>|</span> b) <span style=color:#080;font-style:italic># &amp; shift + \  计算并集</span>
+
+<span style=color:#a2f>print</span>(a <span style=color:#666>-</span> b) <span style=color:#080;font-style:italic># 计算差集</span>
+
+<span style=color:#a2f>print</span>(a <span style=color:#666>^</span> b) <span style=color:#080;font-style:italic># &amp; shift + 6  计算对称差集</span>
+
+a 青菜 <span>，</span> 土豆 <span>，</span> 肉 <span>，</span> 鱼
+b 青菜 <span>，</span> 豆腐
+</code></pre></div><p>本质：存储非重复的数据. 去重</p>
 </div>
 <footer class=post-footer>
+<div class=post-tags>
+<a href=/tags/python rel=tag title=python>#python#</a>
+</div>
 <div class=addthis_inline_share_toolbox></div>
 <div class=post-nav>
 <div class=article-copyright>
@@ -298,10 +335,10 @@ $$</p>
 </div>
 <div class=article-copyright-info>
 <p>
-<span>声明：</span>数据公式设置显示
+<span>声明：</span>字符串详解与格式化输出
 </p>
 <p>
-<span>链接：</span>https://mimanchi01.github.io/post/other_matters/math-typesetting/
+<span>链接：</span>https://mimanchi01.github.io/post/python_basic_knowledge/%E6%97%A0%E5%BA%8F%E5%BA%8F%E5%88%97%E6%95%A3%E5%88%97%E7%B1%BB%E5%9E%8B/
 </p>
 <p>
 <span>作者：</span>-北天-
@@ -331,13 +368,10 @@ $$</p>
 </div>
 <div class=post-nav>
 <div class="post-nav-next post-nav-item">
-<a href=https://mimanchi01.github.io/post/other_matters/placeholder-text/ rel=next title=占位符文本显示>
-<i class="fa fa-chevron-left"></i> 占位符文本显示
-</a>
 </div>
 <div class="post-nav-prev post-nav-item">
-<a href=https://mimanchi01.github.io/post/other_matters/emoji-support/ rel=prev title=支持Emoji表情符号>
-支持Emoji表情符号
+<a href=https://mimanchi01.github.io/post/python_basic_knowledge/%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%AF%A6%E8%A7%A3%E4%B8%8E%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/ rel=prev title=字符串详解与格式化输出>
+字符串详解与格式化输出
 <i class="fa fa-chevron-right"></i>
 </a>
 </div>
@@ -528,7 +562,6 @@ Storage by
 <script type=text/javascript>$(function(){$('.post-body').viewer()})</script>
 <script src=//unpkg.com/valine/dist/Valine.min.js></script>
 <script type=text/javascript>new Valine({el:'#vcomments',appId:'64kXyh5lEETVobOshIgQxzu0-gzGzoHsz',appKey:'gjudWXpueaWynOK5LqC9avoN',visitor:!0,placeholder:' 欢迎留下您的宝贵建议. ^_^ ',requiredFields:['nick','mail'],lang:"zh-cn"})</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
 <script type=text/javascript src="//s7.addthis.com/js/300/addthis_widget.js#pubid=Your%20AddthisId"></script>
 <script>(function(){var a=document.createElement('script'),c=window.location.protocol.split(':')[0],b;c==='https'?a.src='https://zz.bdstatic.com/linksubmit/push.js':a.src='http://push.zhanzhang.baidu.com/push.js',b=document.getElementsByTagName("script")[0],b.parentNode.insertBefore(a,b)})()</script>
 <script>(function(a,e,f,g,b,c,d){a.DaoVoiceObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,c.charset="utf-8",d.parentNode.insertBefore(c,d)})(window,document,"script",('https:'==document.location.protocol?'https:':'http:')+"//widget.daovoice.io/widget/fcb19b54.js","daovoice")</script>
