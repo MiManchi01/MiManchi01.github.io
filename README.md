@@ -1,1 +1,4 @@
-# MiManchi01.github.io
+# 这是我创建的第一个个人博客，欢迎大家前来观看，谢谢！
+
+### 博客比较简单，见谅！
+[博客地址](https://mimanchi01.github.io/)
